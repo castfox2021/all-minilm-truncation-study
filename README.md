@@ -45,6 +45,10 @@ The script downloads the pinned revision (`751bff37182d3f1213fa05d7196b954e230ab
 
 ### Installation & Execution (Clean Fresh Run)
 ```bash
+# 0. Clone repository
+git clone https://github.com/castfox2021/all-minilm-truncation-study.git
+cd all-minilm-truncation-study
+
 # 1. Install exact dependencies using package-lock.json
 npm ci
 
