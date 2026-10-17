@@ -1,0 +1,104 @@
+{
+  "metadata": {
+    "timestamp": "2026-10-17T04:50:25.272Z",
+    "validationType": "repeated_local_execution",
+    "environment": "darwin-x64",
+    "nodeVersion": "v22.14.0",
+    "installedLibrary": "@xenova/transformers@2.17.2",
+    "independentCrossValidationStatus": "pending_external_environment",
+    "model": "Xenova/all-MiniLM-L6-v2",
+    "pinnedRevision": "751bff37182d3f1213fa05d7196b954e230abad9",
+    "model_max_length_onnx": 512,
+    "upstream_default_max_length": 256,
+    "syntheticTokenNotice": "OMEGA-7749-DELTA is a synthetic dummy token created for this benchmark experiment.",
+    "modelFiles": [
+      {
+        "file": "751bff37182d3f1213fa05d7196b954e230abad9/config.json",
+        "sizeBytes": 650,
+        "sha256": "7135149f7cffa1a573466c6e4d8423ed73b62fd2332c575bf738a0d033f70df7"
+      },
+      {
+        "file": "751bff37182d3f1213fa05d7196b954e230abad9/onnx/model_quantized.onnx",
+        "sizeBytes": 22972370,
+        "sha256": "afdb6f1a0e45b715d0bb9b11772f032c399babd23bfc31fed1c170afc848bdb1"
+      },
+      {
+        "file": "751bff37182d3f1213fa05d7196b954e230abad9/tokenizer.json",
+        "sizeBytes": 711661,
+        "sha256": "da0e79933b9ed51798a3ae27893d3c5fa4a201126cef75586296df9b4d2c62a0"
+      },
+      {
+        "file": "751bff37182d3f1213fa05d7196b954e230abad9/tokenizer_config.json",
+        "sizeBytes": 366,
+        "sha256": "9261e7d79b44c8195c1cada2b453e55b00aeb81e907a6664974b4d7776172ab3"
+      }
+    ]
+  },
+  "tokenVerification": [
+    {
+      "name": "Fact at Beginning (Front)",
+      "rawLen": 804,
+      "truncLen": 512,
+      "rawPos": 1,
+      "truncPos": 1,
+      "isPreserved": true
+    },
+    {
+      "name": "Fact at Middle (Tokens ~315)",
+      "rawLen": 804,
+      "truncLen": 512,
+      "rawPos": 315,
+      "truncPos": 315,
+      "isPreserved": true
+    },
+    {
+      "name": "Fact at End (Tokens ~786)",
+      "rawLen": 804,
+      "truncLen": 512,
+      "rawPos": 786,
+      "truncPos": -1,
+      "isPreserved": false
+    }
+  ],
+  "evaluation": [
+    {
+      "placement": "Fact at Beginning (Front)",
+      "rawTokens": 804,
+      "factPreservedIn512": "YES",
+      "unchunkedSim": 0.3027,
+      "unchunkedRank": "#1 / 6",
+      "isTop1Miss": false,
+      "maxPChunkSim": 0.5107,
+      "maxPChunkRank": "#1 / 6",
+      "targetChunkIdx": 0,
+      "targetChunkSim": 0.5107,
+      "isBestChunkTarget": true
+    },
+    {
+      "placement": "Fact at Middle (Tokens ~315)",
+      "rawTokens": 804,
+      "factPreservedIn512": "YES",
+      "unchunkedSim": 0.3177,
+      "unchunkedRank": "#1 / 6",
+      "isTop1Miss": false,
+      "maxPChunkSim": 0.5402,
+      "maxPChunkRank": "#1 / 6",
+      "targetChunkIdx": 3,
+      "targetChunkSim": 0.5402,
+      "isBestChunkTarget": true
+    },
+    {
+      "placement": "Fact at End (Tokens ~786)",
+      "rawTokens": 804,
+      "factPreservedIn512": "NO (LOST)",
+      "unchunkedSim": 0.1759,
+      "unchunkedRank": "#4 / 6",
+      "isTop1Miss": true,
+      "maxPChunkSim": 0.5132,
+      "maxPChunkRank": "#1 / 6",
+      "targetChunkIdx": 8,
+      "targetChunkSim": 0.5132,
+      "isBestChunkTarget": true
+    }
+  ]
+}
